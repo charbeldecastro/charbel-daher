@@ -721,11 +721,15 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.container, section-title {
+  margin-bottom: -20px;
+}
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
   font-weight: 700;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 20px;
 }
 
@@ -1046,7 +1050,9 @@ section,
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 30px 30px 364px;
+  ;
+  
 }
 
 @media (max-width: 575px) {
@@ -1071,6 +1077,7 @@ section,
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
   margin-right: 15px;
+  
 }
 
 .contact .info-item h3 {
