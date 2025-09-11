@@ -1061,7 +1061,17 @@ section,
     padding: 20px;
   }
 }
+ .info-item {
+          display: flex;
+          align-items: flex-start;
+          padding: 20px 0;
+          border-bottom: 1px solid #eee;
+        }
 
+        .info-item:last-child {
+          border-bottom: none;
+        }
+        
 .contact .info-item {
   margin-bottom: 10px;
   margin-top: 10px;
