@@ -870,15 +870,62 @@ section,
   color: rgba(255, 255, 255, 0.8);
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
+/* Estilo base para ambos os botões */
+.portfolio .portfolio-content .portfolio-info .portfolio-btn {
   position: absolute;
-  left: calc(50% - 40px);
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
   font-size: 26px;
-  top: calc(50% - 14px);
   color: #fff;
   transition: 0.3s;
   line-height: 1.2;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Posicionamento específico de cada botão */
+.portfolio .portfolio-content .portfolio-info .portfolio-btn.github-btn {
+  left: calc(50% - 65px); /* 35px à esquerda do centro */
+}
+
+.portfolio .portfolio-content .portfolio-info .portfolio-btn.project-btn {
+  left: calc(50% + 15px); /* 35px à direita do centro */
+}
+
+/* Efeitos de hover */
+.portfolio .portfolio-content .portfolio-info .portfolio-btn.github-btn:hover {
+  background: #333;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.portfolio .portfolio-content .portfolio-info .portfolio-btn.project-btn:hover {
+  background: #0A66C2;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .portfolio .portfolio-content .portfolio-info .portfolio-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+  
+  .portfolio .portfolio-content .portfolio-info .portfolio-btn.github-btn {
+    left: calc(50% - 30px);
+  }
+
+  .portfolio .portfolio-content .portfolio-info .portfolio-btn.project-btn {
+    left: calc(50% + 30px);
+  }
 }
 
 .portfolio .portfolio-content .portfolio-info .preview-link:hover,
